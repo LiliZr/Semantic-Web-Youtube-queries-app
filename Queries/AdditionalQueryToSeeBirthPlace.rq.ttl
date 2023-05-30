@@ -1,0 +1,58 @@
+PREFIX wodiz: <http://example.fr/upsaclay/wod/izri/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/prop/statement/>
+PREFIX wdq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT DISTINCT ?youtuberName ?birthPlace
+WHERE{
+    # Get all the youtubers we got in our graphdb and their info 
+    ?youtuber rdf:type wodiz:Youtuber ; 
+              rdfs:label ?youtuberLabel ; 
+              wodiz:language ?language ; 
+              wodiz:lastViews ?nbLastViews ;
+    		  wodiz:lastVideos ?nbLastVideos ; 
+              wodiz:birthPlaceCoordinates ?cityCoordinates ; 
+              wodiz:allViews ?allViews ; 
+              wodiz:allVideos ?allVideos ;
+              wodiz:birthPlace ?birthPlace .
+    # Computes ratio of the last 30 days of views/videos
+    BIND(round(?nbLastViews/?nbLastVideos) AS ?ratio)
+    # Computes global ratio of views/videos
+    BIND(round(?allViews/?allVideos) AS ?ratioGlobal)
+    
+    # SubQuery to get THE youtuber FR that has the biggest ratio nb views/nb videos
+    {
+        SELECT ?youtuberMax ?ratioMax ?ratioGlobalMax ?cityYTMaxCoordinates
+        WHERE {
+            ?youtuberMax rdf:type wodiz:Youtuber ; 
+                         wodiz:language ?languageYTMax ;
+             			 wodiz:lastViews ?nbLastViewsYTMax ; 
+                         wodiz:lastVideos ?nbLastVideosYTMax ;
+            			 wodiz:birthPlaceCoordinates ?cityYTMaxCoordinates ; 
+                         wodiz:allViews ?allViewsYTMax ; 
+                         wodiz:allVideos ?allVideosYTMax .
+            # Computes ratio of the last 30 days of views/videos
+            BIND(round(?nbLastViewsYTMax/?nbLastVideosYTMax) AS ?ratioMax)
+            # Computes global ratio of views/videos
+            BIND(round(?allViewsYTMax/?allVideosYTMax) AS ?ratioGlobalMax) 
+           	# Filter such that we get French-speaking youtubers 
+            FILTER (?languageYTMax = 'FR')
+        }
+        # Order and limit so we get only the youtuber with the biggest ratio
+        ORDER BY DESC(?ratioMax)
+        LIMIT 1
+    }
+    # Compute the distance between the place of birth of the youtuber FR with the biggest ratio 
+    # 	and all other youtubers 
+    BIND(geof:distance(?cityYTMaxCoordinates, ?cityCoordinates)*100 AS ?distance)
+    BIND(STR(?youtuberLabel) AS ?youtuberName)
+    # We keep only the ones whose distance is less than X km
+    FILTER (?distance <= 600 && lang(?birthPlace) = 'fr')
+}
+ORDER BY DESC(?ratio) DESC (?ratioGlobal)
+LIMIT 10

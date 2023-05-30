@@ -1,0 +1,284 @@
+@base <http://example.com/base/> .
+@prefix wodiz: <http://example.fr/upsaclay/wod/izri/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wodiz:Squeezie a wodiz:Youtuber;
+  rdfs:label "Squeezie"@fr, "Squeezie"@en;
+  wodiz:lastViews 58487594;
+  wodiz:lastVideos 6;
+  wodiz:channel "SQUEEZIE";
+  wodiz:language "FR" .
+
+wodiz:Frédéric%20Molas a wodiz:Youtuber;
+  rdfs:label "Frédéric Molas"@fr, "Frédéric Molas"@en;
+  wodiz:lastViews 6684053;
+  wodiz:lastVideos 2;
+  wodiz:channel "Joueur Du Grenier";
+  wodiz:language "FR" .
+
+wodiz:Joyca a wodiz:Youtuber;
+  rdfs:label "Joyca"@fr, "Joyca"@en;
+  wodiz:lastViews 19376606;
+  wodiz:lastVideos 4;
+  wodiz:channel "JOYCA";
+  wodiz:language "FR" .
+
+wodiz:Cyprien%20Iov a wodiz:Youtuber;
+  rdfs:label "Cyprien Iov"@fr, "Cyprien Iov"@en;
+  wodiz:lastViews 11048665;
+  wodiz:lastVideos 2;
+  wodiz:channel "CYPRIEN";
+  wodiz:language "FR" .
+
+wodiz:Vérino a wodiz:Youtuber;
+  rdfs:label "Vérino"@fr, "Vérino"@en;
+  wodiz:lastViews 1080691;
+  wodiz:lastVideos 6;
+  wodiz:channel "Vérino";
+  wodiz:language "FR" .
+
+wodiz:Kheiron a wodiz:Youtuber;
+  rdfs:label "Kheiron"@fr, "Kheiron"@en;
+  wodiz:lastViews 2778081;
+  wodiz:lastVideos 6;
+  wodiz:channel "Kheiron";
+  wodiz:language "FR" .
+
+wodiz:Mister%20V a wodiz:Youtuber;
+  rdfs:label "Mister V"@fr, "Mister V"@en;
+  wodiz:lastViews 5756265;
+  wodiz:lastVideos 2;
+  wodiz:channel "Mister V";
+  wodiz:language "FR" .
+
+wodiz:EnjoyPhoenix a wodiz:Youtuber;
+  rdfs:label "EnjoyPhoenix"@fr, "EnjoyPhoenix"@en;
+  wodiz:lastViews 712552;
+  wodiz:lastVideos 3;
+  wodiz:channel "EnjoyPhoenix";
+  wodiz:language "FR" .
+
+wodiz:Maghla a wodiz:Youtuber;
+  rdfs:label "Maghla"@fr, "Maghla"@en;
+  wodiz:lastViews 755309;
+  wodiz:lastVideos 2;
+  wodiz:channel "Maghla";
+  wodiz:language "FR" .
+
+wodiz:Seb%20la%20Frite%20 a wodiz:Youtuber;
+  rdfs:label "Seb la Frite "@fr, "Seb la Frite "@en;
+  wodiz:lastViews 3603975;
+  wodiz:lastVideos 2;
+  wodiz:channel "SEB";
+  wodiz:language "FR" .
+
+wodiz:Pierre%20Croce%20 a wodiz:Youtuber;
+  rdfs:label "Pierre Croce "@fr, "Pierre Croce "@en;
+  wodiz:lastViews 6993780;
+  wodiz:lastVideos 6;
+  wodiz:channel "Pierre Croce";
+  wodiz:language "FR" .
+
+wodiz:Gotaga a wodiz:Youtuber;
+  rdfs:label "Gotaga"@fr, "Gotaga"@en;
+  wodiz:lastViews 12180590;
+  wodiz:lastVideos 18;
+  wodiz:channel "GOTAGA";
+  wodiz:language "FR" .
+
+wodiz:Ponce a wodiz:Youtuber;
+  rdfs:label "Ponce"@fr, "Ponce"@en;
+  wodiz:lastViews 728445;
+  wodiz:lastVideos 8;
+  wodiz:channel "Ponce";
+  wodiz:language "FR" .
+
+wodiz:Amixem a wodiz:Youtuber;
+  rdfs:label "Amixem"@fr, "Amixem"@en;
+  wodiz:lastViews 36936647;
+  wodiz:lastVideos 7;
+  wodiz:channel "Amixem";
+  wodiz:language "FR" .
+
+wodiz:Michou a wodiz:Youtuber;
+  rdfs:label "Michou"@fr, "Michou"@en;
+  wodiz:lastViews 5873504;
+  wodiz:lastVideos 4;
+  wodiz:channel "Michou";
+  wodiz:language "FR" .
+
+wodiz:Tibo%20InShape a wodiz:Youtuber;
+  rdfs:label "Tibo InShape"@fr, "Tibo InShape"@en;
+  wodiz:lastViews 53324898;
+  wodiz:lastVideos 5;
+  wodiz:channel "Tibo InShape";
+  wodiz:language "FR" .
+
+wodiz:Julien%20Donzé a wodiz:Youtuber;
+  rdfs:label "Julien Donzé"@fr, "Julien Donzé"@en;
+  wodiz:lastViews 4511361;
+  wodiz:lastVideos 3;
+  wodiz:channel "LE GRAND JD";
+  wodiz:language "FR" .
+
+wodiz:Gronkh a wodiz:Youtuber;
+  rdfs:label "Gronkh"@fr, "Gronkh"@en;
+  wodiz:lastViews 13113679;
+  wodiz:lastVideos 68;
+  wodiz:channel "Gronkh";
+  wodiz:language "DE" .
+
+wodiz:PewDiePie a wodiz:Youtuber;
+  rdfs:label "PewDiePie"@fr, "PewDiePie"@en;
+  wodiz:lastViews 205126769;
+  wodiz:lastVideos 5;
+  wodiz:channel "PewDiePie";
+  wodiz:language "EN" .
+
+wodiz:Thomas%20George%20Cassell a wodiz:Youtuber;
+  rdfs:label "Thomas George Cassell"@fr, "Thomas George Cassell"@en;
+  wodiz:lastViews 1401698;
+  wodiz:lastVideos 4;
+  wodiz:channel "Life of Tom";
+  wodiz:language "EN" .
+
+wodiz:Joseph%20Garrett a wodiz:Youtuber;
+  rdfs:label "Joseph Garrett"@fr, "Joseph Garrett"@en;
+  wodiz:lastViews 8346378;
+  wodiz:lastVideos 5;
+  wodiz:channel "stampylonghead";
+  wodiz:language "EN" .
+
+wodiz:Daniel%20Howell a wodiz:Youtuber;
+  rdfs:label "Daniel Howell"@fr, "Daniel Howell"@en;
+  wodiz:lastViews 2099136;
+  wodiz:lastVideos 4;
+  wodiz:channel "Daniel Howell";
+  wodiz:language "EN" .
+
+wodiz:KSI a wodiz:Youtuber;
+  rdfs:label "KSI"@fr, "KSI"@en;
+  wodiz:lastViews 40714812;
+  wodiz:lastVideos 9;
+  wodiz:channel "JJ Olatunji";
+  wodiz:language "EN" .
+
+wodiz:Dr%20Nozman a wodiz:Youtuber;
+  rdfs:label "Dr Nozman"@fr, "Dr Nozman"@en;
+  wodiz:lastViews 11862069;
+  wodiz:lastVideos 5;
+  wodiz:channel "Dr Nozman";
+  wodiz:language "FR" .
+
+wodiz:Rivenzi a wodiz:Youtuber;
+  rdfs:label "Rivenzi"@fr, "Rivenzi"@en;
+  wodiz:lastViews 59775;
+  wodiz:lastVideos 7;
+  wodiz:channel "Rivenzi";
+  wodiz:language "FR" .
+
+wodiz:Vilebrequin a wodiz:Youtuber;
+  rdfs:label "Vilebrequin"@fr, "Vilebrequin"@en;
+  wodiz:lastViews 15269555;
+  wodiz:lastVideos 5;
+  wodiz:channel "Vilebrequin";
+  wodiz:language "FR" .
+
+wodiz:Domingo a wodiz:Youtuber;
+  rdfs:label "Domingo"@fr, "Domingo"@en;
+  wodiz:lastViews 6806700;
+  wodiz:lastVideos 3;
+  wodiz:channel "Domingo";
+  wodiz:language "FR" .
+
+wodiz:Etoiles a wodiz:Youtuber;
+  rdfs:label "Etoiles"@fr, "Etoiles"@en;
+  wodiz:lastViews 1222308;
+  wodiz:lastVideos 12;
+  wodiz:channel "Etoiles";
+  wodiz:language "FR" .
+
+wodiz:ZeratoR a wodiz:Youtuber;
+  rdfs:label "ZeratoR"@fr, "ZeratoR"@en;
+  wodiz:lastViews 1427238;
+  wodiz:lastVideos 6;
+  wodiz:channel "ZeratoR";
+  wodiz:language "FR" .
+
+wodiz:Zoe%20Sugg a wodiz:Youtuber;
+  rdfs:label "Zoe Sugg"@fr, "Zoe Sugg"@en;
+  wodiz:lastViews 11577368;
+  wodiz:lastVideos 21;
+  wodiz:channel "Zoella";
+  wodiz:language "EN" .
+
+wodiz:Phil%20Laude a wodiz:Youtuber;
+  rdfs:label "Phil Laude"@fr, "Phil Laude"@en;
+  wodiz:lastViews 3637376;
+  wodiz:lastVideos 4;
+  wodiz:channel "Phil Laude";
+  wodiz:language "DE" .
+
+wodiz:Mirko%20Drotschmann a wodiz:Youtuber;
+  rdfs:label "Mirko Drotschmann"@fr, "Mirko Drotschmann"@en;
+  wodiz:lastViews 2496003;
+  wodiz:lastVideos 4;
+  wodiz:channel "MrWissen2go";
+  wodiz:language "DE" .
+
+wodiz:Sébastien%20Cauet a wodiz:Youtuber;
+  rdfs:label "Sébastien Cauet"@fr, "Sébastien Cauet"@en;
+  wodiz:lastViews 4140311;
+  wodiz:lastVideos 10;
+  wodiz:channel "Cauet";
+  wodiz:language "FR" .
+
+wodiz:Hugo%20Travers%20 a wodiz:Youtuber;
+  rdfs:label "Hugo Travers "@fr, "Hugo Travers "@en;
+  wodiz:lastViews 2288197;
+  wodiz:lastVideos 3;
+  wodiz:channel "HugoDécrypte";
+  wodiz:language "FR" .
+
+wodiz:Jacksepticeye a wodiz:Youtuber;
+  rdfs:label "Jacksepticeye"@fr, "Jacksepticeye"@en;
+  wodiz:lastViews 90476309;
+  wodiz:lastVideos 16;
+  wodiz:channel "jacksepticeye";
+  wodiz:language "EN" .
+
+wodiz:Léna%20Mahfouf a wodiz:Youtuber;
+  rdfs:label "Léna Mahfouf"@fr, "Léna Mahfouf"@en;
+  wodiz:lastViews 1508687;
+  wodiz:lastVideos 1;
+  wodiz:channel "Léna Situations";
+  wodiz:language "FR" .
+
+wodiz:Sheshounet a wodiz:Youtuber;
+  rdfs:label "Sheshounet"@fr, "Sheshounet"@en;
+  wodiz:lastViews 3255910;
+  wodiz:lastVideos 2;
+  wodiz:channel "Sheshounet";
+  wodiz:language "FR" .
+
+wodiz:MisterJDay a wodiz:Youtuber;
+  rdfs:label "MisterJDay"@fr, "MisterJDay"@en;
+  wodiz:lastViews 420382;
+  wodiz:lastVideos 1;
+  wodiz:channel "MisterJDay";
+  wodiz:language "FR" .
+
+wodiz:Bob%20Lennon a wodiz:Youtuber;
+  rdfs:label "Bob Lennon"@fr, "Bob Lennon"@en;
+  wodiz:lastViews 2598541;
+  wodiz:lastVideos 16;
+  wodiz:channel "Bob Lennon";
+  wodiz:language "FR" .
+
+wodiz:Kameto a wodiz:Youtuber;
+  rdfs:label "Kameto"@fr, "Kameto"@en;
+  wodiz:lastViews 2763531;
+  wodiz:lastVideos 8;
+  wodiz:channel "Kameto";
+  wodiz:language "FR" .

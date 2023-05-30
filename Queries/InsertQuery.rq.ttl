@@ -1,0 +1,47 @@
+PREFIX wodiz: <http://example.fr/upsaclay/wod/izri/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/prop/statement/>
+PREFIX wdq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT {
+    # Create new links
+    ?youtuber owl:sameAs ?wdYoutuber ;
+              wodiz:allViews ?wdChannelAllViews ;
+              wodiz:allVideos ?wdChannelAllVideos ;
+              wodiz:birthPlace ?wdYoutuberCityLabel ;
+			  wodiz:birthPlaceCoordinates ?wdYoutuberCityLocation .
+}
+WHERE
+{  
+    # Queriying wikidata: Get youtubers missing information
+    SERVICE <https://query.wikidata.org/sparql> {
+        # A youtuber is a type of human, has a label, a place of birth and youtube channel Ids
+    	?wdYoutuber wdt:P31 wd:Q5 ;
+        			rdfs:label ?wdYoutuberLabel ;
+        			wdt:P19 ?wdYoutuberCity ;
+           			wdt:P2397 ?wdChannelYtID .
+        
+        ?wdYoutuberCity wdt:P625 ?wdYoutuberCityLocation ;
+                        wdt:P1448 ?wdYoutuberCityLabel .
+            
+        # Get infos of YT channel corresponding to the Id
+        ?ytChannel wds:P2397 ?wdChannelYtID ;
+        		   wdq:P1810 ?wdChannelYtName ;
+                   wdq:P3740 ?wdChannelAllVideos ;
+                   wdq:P5436 ?wdChannelAllViews .
+        FILTER ( LANG(?wdYoutuberLabel) = 'en' || LANG(?wdYoutuberLabel) = 'fr')
+        
+	}
+    # Youtuber on our local graphdb
+    ?youtuber rdf:type wodiz:Youtuber ;
+              rdfs:label ?youtuberLabel ;
+              wodiz:channel ?channelName .
+    
+	# Filter such that the name of the youtuber and its yt channel are the same than the ones on wikidata
+    FILTER (STR(?wdChannelYtName) = STR(?channelName)  
+         && STR(?wdYoutuberLabel) = STR(?youtuberLabel))
+}
